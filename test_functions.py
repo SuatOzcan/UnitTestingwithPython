@@ -20,3 +20,9 @@ class TestFunctions(TestCase):
         divisor = 3
         expected_result= 0
         self.assertEqual(divide(dividend, divisor), expected_result)
+
+    def test_divide_error_zero(self):
+        with self.assertRaises(ValueError):
+            divide(25, 0)
+        
+        #self.assertRaises(ValueError, lambda : divide(25, 0))
